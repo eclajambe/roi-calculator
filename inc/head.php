@@ -1,4 +1,4 @@
-<?php require('helpers.php'); ?>
+<?php require('helpers/helpers.php'); ?>
 
 <!doctype html>
 <html class="no-js" lang="">
@@ -18,6 +18,7 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/rangeslider.css">
+        <link rel="stylesheet" href="css/concur-style.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/custom.css">
 

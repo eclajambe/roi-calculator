@@ -1,5 +1,4 @@
                     <div id="sidebar" class="col-sm-5">
-
                         <div class="row no-gutters">
                             <div id="labor-savings" class="col-sm-6 text-center">
                                 <div class="border--lt-grey eq-height p-4 br-0 bb-0 r-tl">
@@ -21,8 +20,8 @@
                                 <div class="border--lt-gold eq-height p-4 r-br r-bl">
                                     <p>Estimated yearly ROI</p>
                                     <span class="value-number gold-text">$284,000</span>
+                                    <a href="img/ConcurROICalculatorResults.pdf" class="btn btn-primary mt-3" download>Download results</a>
                                 </div><!--// .border--lt-grey -->
                             </div><!--// .col-sm-12 -->
                         </div><!--// .row -->
-
                     </div><!--// #sidebar.col-sm-5 -->

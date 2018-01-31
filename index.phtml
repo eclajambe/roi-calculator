@@ -2,19 +2,40 @@
 
     <body>
 
-        <div class="container-fluid module">
+        <div class="container-fluid py-5">
             <div class="container">              
-                <div class="row text-center">
-                    <h2 class="text-center">Choose your experience:</h2>
-                </div>
-                <div class="row">
-                    <ul class="list-unstyled">
-                        <li><a class="btn btn-primary mb-2" href="uncookied.phtml">Uncookied</a></li>
-                        <li><a class="btn btn-primary" href="cookied.phtml">Cookied</a></li>
-                    </ul>
-                </div>
+                
+                <div class="row justify-content-md-center mb-4">
+                   
+                   <div class="col-sm-8 text-center">
+                        <h4>Your expense with the ROI calculator will differ based on whether you have previously fill out a form on concur.com</h4>
+                        <h5>Please choose your experience below:</h5>
+                    </div><!--// .col-sm -->
 
                 </div><!--// .row -->
+
+                <div class="row">
+                   
+                    <div class="col-sm-6">
+                        <div class="border--lt-grey eq-height p-4 text-center">
+                            
+                            <h5 class="mb-4">I am a user that <span class="highlight">HAS</span> previously filled out a form on concur.com</h5>
+                            <a class="btn btn-primary mb-2" href="module-uncookied.phtml">Uncookied experience</a>
+
+                        </div><!--// .border--lt-grey -->
+                    </div><!--// .col-sm-6 -->
+
+                    <div class="col-sm-6">
+                        <div class="border--lt-grey eq-height p-4 text-center">
+
+                            <h5 class="mb-4">I am a user that <span class="highlight">HAS NOT</span> previously filled out a form on concur.com</h5>
+                            <a class="btn btn-primary" href="module-cookied.phtml">Cookied experience</a>
+
+                        </div><!--// .border--lt-grey -->    
+                    </div><!--// .col-sm-6 -->
+
+                </div><!--// .row -->
+
             </div><!--// .container -->
         </div><!--// .container-fluid -->
 

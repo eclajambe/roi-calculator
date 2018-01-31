@@ -1,5 +1,4 @@
                     <div id="sidebar" class="col-sm-5">
-
                         <div class="row no-gutters">
                             <div id="labor-savings" class="col-sm-6 text-center">
                                 <div class="border--lt-grey eq-height p-4 br-0 bb-0 r-tl">
@@ -24,5 +23,4 @@
                                 </div><!--// .border--lt-grey -->
                             </div><!--// .col-sm-12 -->
                         </div><!--// .row -->
-
                     </div><!--// #sidebar.col-sm-5 -->
