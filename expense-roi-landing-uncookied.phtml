@@ -1,0 +1,268 @@
+<?php include 'inc/head.php'; ?>
+    
+    <body>
+
+        <div class="container-fluid module">
+            <div class="container">     
+                
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h4 class="tool-name text-uppercase">ROI Calculator</h5>
+                        <h1 class="mb-5">Concur Expense ROI Calculator</h1>
+                    </div><!--// .col-sm-12 -->
+                </div><!--// .row -->         
+
+                <div class="row">
+
+                    <div id="calculator" class="col-sm-7">
+                        <div id="company-info" class="category-container border--lt-grey" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#company-info" href="#collapseOne" class="category-title p-4 collapsed" aria-expanded="true" aria-controls="collapseOne">
+                                            Company info
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+
+                       			<div class="row px-4 pb-4">
+
+								<?php echo question(
+										'How many employees in your company?', //question
+										'1', // min
+										'1000', // max 
+										'1', // step
+										'650', // value
+										'# of employees' // unit
+									); 
+								?>
+								
+							</div><!-- // .row -->                              
+
+                                </div><!--// .panel-collapse -->
+                            </div><!--// .panel -->
+                        </div><!--// .category-container.border--lt-grey -->
+
+                        <div id="employee-expense-distribution" class="category-container border--lt-grey" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#employee-expense-distribution" href="#collapseTwo" class="category-title p-4" aria-expanded="true" aria-controls="collapseTwo">
+                                            Employee expense and distribution
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingTwo">
+                                    
+                                    <div class="row px-4 pb-4">
+
+								<?php echo question(
+										'How many expense report filers do you have?', //question
+										'1', // min
+										'50', // max 
+										'1', // step
+										'20', // value
+										'# of filers' // unit
+									); 
+								?>
+
+								<?php echo question(
+										'Number of expense reports per filer/month?', //question
+										'1', // min
+										'50', // max 
+										'1', // step
+										'2', // value
+										'# reports/month' // unit
+									); 
+								?>
+
+                                    </div><!--// .row -->                                  
+
+                                </div><!--// .panel-collapse -->
+                            </div><!--// .panel -->
+                        </div><!--// .category-container.border--lt-grey -->
+
+                        <div id="losses-fraud-violations" class="category-container border--lt-grey" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#losses-fraud-violations" href="#collapseThree" class="category-title p-4" aria-expanded="true" aria-controls="collapseThree">
+                                            Loss due to fraud and violations
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingThree">
+                                    
+                                     <div class="row px-4 pb-4">
+
+								<?php echo question(
+										'Percentage of spend that is out of policy?', //question
+										'0', // min
+										'100', // max 
+										'1', // step
+										'20', // value
+										'# of employees' // unit
+									); 
+								?>  
+
+								<?php echo question(
+										'Percentage of travelers who pad their expense report?', //question
+										'0', // min
+										'50', // max 
+										'1', // step
+										'17', // value
+										'# of employees' // unit
+									); 
+								?>  
+                                    
+                                    </div><!--// .row -->
+
+                                    <div class="row px-4 pb-4">
+
+								<?php echo question(
+										'Average amount fraudulently claimed?', //question
+										'5', // min
+										'1000', // max 
+										'1', // step
+										'50', // value
+										'# of employees' // unit
+									); 
+								?> 
+
+                                    </div><!--// .row -->                         
+
+                                </div><!--// .panel-collapse -->
+                            </div><!--// .panel -->
+                        </div><!--// .category-container.border--lt-grey -->
+
+                        <div id="time-effort" class="category-container border--lt-grey" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingFour">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#time-effort" href="#collapseFour" class="category-title p-4" aria-expanded="true" aria-controls="collapseFour">
+                                            Time and effort
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingFour">
+                                    
+                                    <div class="row px-4 pb-4">
+
+								<?php echo question(
+										'Time it takes to create an expense report?', //question
+										'1', // min
+										'100', // max 
+										'1', // step
+										'5', // value
+										'min' // unit
+									); 
+								?> 
+
+								<?php echo question(
+										'ime it takes a manager to review and approve each report?', //question
+										'1', // min
+										'100', // max 
+										'1', // step
+										'11', // value
+										'min' // unit
+									); 
+								?> 
+
+                                    </div><!--// .row -->
+
+                                    <div class="row px-4 pb-4">
+
+								<?php echo question(
+										'Time it takes for a back office employee to review and approve?', //question
+										'1', // min
+										'100', // max 
+										'1', // step
+										'20', // value
+										'min' // unit
+									); 
+								?> 
+
+								<?php echo question(
+										'Time it takes to create a reimbursement check?', //question
+										'1', // min
+										'100', // max 
+										'1', // step
+										'20', // value
+										'min' // unit
+									); 
+								?>
+                                        
+                                    </div><!--// .row -->
+
+                                </div><!--// .panel-collapse -->
+                            </div><!--// .panel -->
+                        </div><!--// .category-container.border--lt-grey -->
+
+                    </div><!--// #calculator.col-sm-7 -->
+
+                    <?php include 'inc/sidebar-uncookied.inc'; ?>
+
+                </div><!--// .row -->
+            </div><!--// .container -->
+
+            <!-- Form -->
+            <div id="form" class="container py-5">
+                <div class="row">
+                    
+                    <div class="col-sm-5">
+                        <h5>Fill out this form</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    </div><!--// .col-sm-4 -->
+                    <div class="col-sm-7">
+                        <form>
+                            <div class="form-group row">
+                                
+                                <div class="col-sm-6">
+                                    <fieldset class="form-group">
+                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First Name">
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Company Name">
+                                    </fieldset>                                
+                                    <fieldset class="form-group">
+                                        <input type="text" class="form-control" id="formGroupExampleInput5" placeholder="Postal Code">
+                                    </fieldset>            
+                                    <fieldset class="form-group">
+                                        <input type="text" class="form-control" id="formGroupExampleInput7" placeholder="Phone Number">
+                                    </fieldset>
+                                </div><!--// .col-sm-6 -->
+
+                                <div class="col-sm-6">
+                                    <fieldset class="form-group">
+                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Last Name">
+                                    </fieldset>         
+                                    <fieldset class="form-group">
+                                        <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="Number of Employees">
+                                    </fieldset> 
+                                    <fieldset class="form-group">
+                                        <input type="text" class="form-control" id="formGroupExampleInput6" placeholder="USA">
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <input type="text" class="form-control" id="formGroupExampleInput8" placeholder="Business Email">
+                                    </fieldset>
+                                </div><!--// .col-sm-6 -->
+
+                            </div>
+
+                            <a class="btn btn-primary" href="results.phtml">Submit</a>
+
+                        </form>
+                    </div><!--// .col-sm-7 -->
+                    
+                    <div class="spacer" style="height: 1000px"></div>
+
+                </div><!--// .row -->
+            </div><!--// .container -->
+
+        </div><!--// .container-fluid -->
+
+        <?php include 'inc/footer-scripts.inc'; ?>
+
+    </body>
+</html>
