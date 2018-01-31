@@ -63,11 +63,11 @@ function placeholderModule($type, $contentSide, $headingText, $bottomPadding)
 			$mb .=				'<p class="pb-5">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod.</p>';
 			$mb .=			'</div><!--// . col-sm-6 -->';
 			$mb .=			'<div class="col-sm-6">';
-			$mb .=				'<div class="ph ph-image"><h1>Graphic</h1></div>';
+			$mb .=				'<div class="ph ph-image"><h1>Placeholder</h1></div>';
 			$mb .=			'</div><!--// . col-sm-6 -->';	
 		} else {
 			$mb .=			'<div class="col-sm-6">';
-			$mb .=				'<div class="ph ph-image"><h1>Graphic</h1></div>';
+			$mb .=				'<div class="ph ph-image"><h1>Placeholder</h1></div>';
 			$mb .=			'</div><!--// . col-sm-6 -->';
 			$mb .=			'<div class="col-sm-6">';
 			$mb .=				'<h2>' . $headingText . '</h2>';
