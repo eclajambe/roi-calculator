@@ -1,4 +1,4 @@
-                    <div id="sidebar" class="col-sm-5">
+                    <div id="sidebar" class="sidebar fixedsticky col-sm-5">
                         <div class="row no-gutters">
                             <div id="labor-savings" class="col-sm-6 text-center">
                                 <div class="border--lt-grey eq-height p-4 br-0 bb-0 r-tl">
@@ -19,7 +19,7 @@
                             <div id="projected-roi" class="col-sm-12 text-center">
                                 <div class="border--lt-gold eq-height p-4 r-br r-bl">
                                     <p>Estimated yearly ROI</p>
-                                    <a href="#form" class="btn btn-primary ss">Calculate final ROI</a>
+                                    <a href="#form" class="btn btn-primary reveal-form ss">Calculate final ROI</a>
                                 </div><!--// .border--lt-grey -->
                             </div><!--// .col-sm-12 -->
                         </div><!--// .row -->

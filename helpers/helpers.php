@@ -31,17 +31,17 @@ function question($question, $min, $max, $step, $value, $unit)
 
 /**
 	* 
-	* Module Builder -
+	* Placeholder Module Builder -
 	* 
 	* Helps generate a placeholder module
 	*
 	* @var type        - (string) Accepts either 'content' or 'cta'
 	* @var contentSide - (string) Defaults to 'right', accepts 'left'
 	* @var headingText - (string) Heading text to display in placeholder
-	* @var noBottomPad - (bool) If true, remove bottom padding
+	* @var bottomPad - (bool) If true, add bottom padding
 	*
 **/
-function moduleBuilder($type, $contentSide, $headingText, $bottomPadding) 
+function placeholderModule($type, $contentSide, $headingText, $bottomPadding) 
 {	
 
 	if ($bottomPadding) 

@@ -241,6 +241,9 @@ h3.panel-title {
 .panel-heading .panel-title a.collapsed:after {
 	content: '+';
 }
+.fixedsticky {
+	top: 0;
+}
 
 #calculator .category-container {
 	margin-bottom: 30px;
