@@ -160,7 +160,7 @@
 								?> 
 
 								<?php echo question(
-										'ime it takes a manager to review and approve each report?', //question
+										'Time it takes a manager to review and approve each report?', //question
 										'1', // min
 										'100', // max 
 										'1', // step
@@ -207,7 +207,7 @@
             </div><!--// .container -->
 
             <!-- Form -->
-            <div id="form" class="container py-5">
+            <div id="form" class="hidden container py-5">
                 <div class="row">
                     
                     <div class="col-sm-5">
@@ -254,13 +254,15 @@
 
                         </form>
                     </div><!--// .col-sm-7 -->
-                    
-                    <div class="spacer" style="height: 700px"></div>
 
                 </div><!--// .row -->
             </div><!--// .container -->
 
         </div><!--// .container-fluid -->
+
+        <?php echo moduleBuilder('content', 'left', 'Section headline', 0); ?>
+        <?php echo moduleBuilder('content', 'right', 'Section headline', 0); ?>
+        <?php echo moduleBuilder('cta', '','CTA Headline', 1); ?>
 
         <?php include 'inc/footer-scripts.inc'; ?>
 
