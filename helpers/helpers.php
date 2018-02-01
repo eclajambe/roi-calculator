@@ -80,10 +80,12 @@ function placeholderModule($type, $contentSide, $headingText, $bottomPadding)
 		for ($i = 0; $i < 3; $i++)
 		{
 			$mb .=			'<div class="col-sm-4 text-center">';
-			$mb .=				'<span class="ph ph-icon mb-4"></span>';
-			$mb .=				'<h3>' . $headingText . '</h3>';
-			$mb .=				'<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.</p>';
-			$mb .=				'<a href="#">Learn more</a>';
+			$mb .=				'<div class="bg--white p-4">';
+			$mb .=					'<span class="ph ph-icon mb-4"></span>';
+			$mb .=					'<h3>' . $headingText . '</h3>';
+			$mb .=					'<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.</p>';
+			$mb .=					'<a href="#">Learn more</a>';
+			$mb .=				'</div><!--// .p-4 -->';
 			$mb .=			'</div><!--// . col-sm-4 -->';
 		}// end for
 	}// end if
