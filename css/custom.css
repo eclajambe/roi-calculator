@@ -263,14 +263,3 @@ h3.panel-title {
     content: '';
     display: table;
 }
-
-/*#sidebar .stick.fixed {
-	position: fixed;
-	top: 0;
-}	
-#sidebar .stick.bottom {
-	position: absolute;
-	bottom: 0;
-	top: auto;
-}*/
-
