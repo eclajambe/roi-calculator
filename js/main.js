@@ -41,3 +41,31 @@ $('.reveal-form').click(function() {
         scrollTop: $('#form').offset().top
     }, 200);
 });
+
+
+
+/*
+* Fix sidebar at some point and remove
+* fixed position at content bottom
+
+$(window).scroll(function () {
+  var headerHeight     = $('#header').innerHeight(),
+      heroHeight       = $('#hero').innerHeight(),
+      contentHeight    = $('#main-content').innerHeight(),
+      sidebarHeight    = $('#sidebar').height(),
+      sidebarBottomPos = contentHeight - sidebarHeight, 
+      trigger          = $(window).scrollTop() - headerHeight;
+
+        if ($(window).scrollTop() >= headerHeight + heroHeight) {
+            $('#sidebar .stick').addClass('fixed');
+        } else {
+            $('#sidebar .stick').removeClass('fixed');
+        }
+
+        if (trigger >= sidebarBottomPos) {
+            $('#sidebar .stick').addClass('bottom');
+        } else {
+            $('#sidebar .stick').removeClass('bottom');
+        }
+});
+*/
