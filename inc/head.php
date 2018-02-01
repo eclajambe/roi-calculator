@@ -24,4 +24,12 @@
 
     </head>
 
-    <header id="header"></header>
+    <header id="header" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="img/sap-concur-logo.svg" width="165" />
+                </div><!--// .col-sm-3 -->
+            </div><!--// .row -->
+        </div><!--// .container -->
+    </header>

@@ -70,7 +70,8 @@ img {
 /* Global */
 header {
 	background: #111;
-	height: 75px;
+	padding-top: 1.424em;
+	padding-bottom: 1.424em;
 }
 footer {
 	background: #111;
