@@ -51,7 +51,7 @@ function placeholderModule($type, $contentSide, $headingText, $bottomPadding)
 		$bottomPadding = 'pt-5';
 	}
 
-	$mb  = '<div class="container-fluid bg--lt-grey ' . $bottomPadding . '">';
+	$mb  = '<div class="container-fluid bg--lt-grey ph-module ' . $bottomPadding . '">';
 	$mb .=	'<div class="container">';
 	$mb .=		'<div class="row">';
 

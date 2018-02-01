@@ -23,6 +23,9 @@ img {
 .ph {
 	background: #DDD;
 }
+.ph-module {
+	opacity: 0.6;
+}
 .ph-heading {
 	height: 50px;
 }
