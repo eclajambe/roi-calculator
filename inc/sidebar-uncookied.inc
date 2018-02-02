@@ -4,7 +4,7 @@
                                 <div id="labor-savings" class="col-sm-6 text-center">
                                     <div class="border--lt-grey eq-height p-4 br-0 bb-0 r-tl">
                                         <p>Yearly labor savings</p>
-                                        <span id="final_score" class="value-number sm gold-text">25,000</span>
+                                        <span id="final_score" class="value-number sm gold-text">$25,000</span>
                                     </div><!--// .border--lt-grey -->
                                 </div><!--// .col-sm-6 -->
 

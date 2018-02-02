@@ -156,6 +156,7 @@ a:focus {
 	line-height: 30px;
 	height: auto;
 }
+.value-toggle.sliding .value-number,
 .value-number:focus {
 	outline: 0;
 	color: #F0AB00;
@@ -171,7 +172,7 @@ input[type=number]::-webkit-outer-spin-button {
 .value-unit {
 	display: block;
 	font-size: 16px;
-	color: #999;
+	color: #333;
 }
 .value-outcome {
 	color: #F0AB00;
