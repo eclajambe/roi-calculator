@@ -13,17 +13,20 @@
 	* @var $value   - (number) Initial value of input (the assumption we've made)
 	*
 */
-function question($question, $min, $max, $step, $value, $unit) 
+function question($question, $min, $max, $step, $value, $unit, $id='') 
 {	
+	// TODO: is "js-amount-input" necessary?
 	$data  = '<div class="col-sm-6">';
+	$data .= '  <div id="q-container-'.$id.'">';
 	$data .= 	'<p>' . $question . '</p>';
 	$data .= 	'<div class="range-wrap">';
-	$data .= 		'<input type="range" id="slider-1" class="sliderRange" min="' . $min . 'max="' . $max . '"' . 'step="' . $step . '"' . 'value="' . $value . '">';
+	$data .= 		'<input type="range" id="slider-'.$id.'" class="sliderRange" min="' . $min . 'max="' . $max . '"' . 'step="' . $step . '"' . 'value="' . $value . '">';
 	$data .= 	'</div><!--// .range-wrap -->';
 	$data .= 	'<div class="value-toggle">';
-	$data .= 		'<input type="number" id="js-amount-input" class="value-number" min="' . $min . 'max="' . $max . '"' . 'step="' . $step . '"' . 'value="' . $value . '">';
+	$data .= 		'<input type="number" id="number-'.$id.'" class="value-number js-amount-input" min="' . $min . 'max="' . $max . '"' . 'step="' . $step . '"' . 'value="' . $value . '">';
 	$data .= 		'<span class="value-unit">' . $unit . '</span>';
 	$data .=   	'</div><!--// .value-toggle -->';
+	$data .= '  </div><!--// #q-container-'.$id.' -->';
 	$data .= '</div><!--// .col-sm -6 -->';
 
 	return $data;

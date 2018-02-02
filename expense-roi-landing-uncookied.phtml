@@ -29,12 +29,13 @@
                                     <div class="row px-4 pb-4">
 
         								<?php echo question(
-        										'How many employees in your company?', //question
+                                                'How many employees in your company?', //question
         										'1', // min
         										'1000', // max 
         										'1', // step
         										'650', // value
-        										'# of employees' // unit
+        										'# of employees', // unit
+                                                'employee_count' // id
         									); 
         								?>
 								
@@ -63,7 +64,8 @@
 										'50', // max 
 										'1', // step
 										'20', // value
-										'# of filers' // unit
+										'# of filers', // unit
+                                        'expense_count' // id
 									); 
 								?>
 
@@ -73,7 +75,8 @@
 										'50', // max 
 										'1', // step
 										'2', // value
-										'# reports/month' // unit
+										'# reports/month', // unit
+                                        'expense_per_month' // id
 									); 
 								?>
 
@@ -102,7 +105,8 @@
 										'100', // max 
 										'1', // step
 										'20', // value
-										'# of employees' // unit
+										'# of employees', // unit
+                                        'out_of_spend_percent' // id
 									); 
 								?>  
 
@@ -112,7 +116,8 @@
 										'50', // max 
 										'1', // step
 										'17', // value
-										'# of employees' // unit
+										'# of employees', // unit
+                                        'report_pad_percent' // id
 									); 
 								?>  
                                     
@@ -126,7 +131,8 @@
 										'1000', // max 
 										'1', // step
 										'50', // value
-										'# of employees' // unit
+										'# of employees', // unit
+                                        'fraud_average' // id
 									); 
 								?> 
 
@@ -155,7 +161,8 @@
 										'100', // max 
 										'1', // step
 										'5', // value
-										'min' // unit
+										'min', // unit
+                                        'expense_time' // id
 									); 
 								?> 
 
@@ -165,7 +172,8 @@
 										'100', // max 
 										'1', // step
 										'11', // value
-										'min' // unit
+										'min', // unit
+                                        'review_time' // id
 									); 
 								?> 
 
@@ -179,7 +187,8 @@
 										'100', // max 
 										'1', // step
 										'20', // value
-										'min' // unit
+										'min', // unit
+                                        'back_employee_time' // id
 									); 
 								?> 
 
@@ -189,7 +198,8 @@
 										'100', // max 
 										'1', // step
 										'20', // value
-										'min' // unit
+										'min', // unit
+                                        'reimbursement_time' // id
 									); 
 								?>
                                         

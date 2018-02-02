@@ -12,7 +12,7 @@
         <!-- Range Slider (http://rangeslider.js.org/) -->
         <script src="js/vendor/rangeslider.min.js"></script>        
         <!-- Stickyfill (https://github.com/wilddeer/stickyfill) -->
-        <script src="https://raw.githubusercontent.com/wilddeer/stickyfill/master/dist/stickyfill.min.js"></script>
+        <script src="js/vendor/stickyfill.min.js"></script>
         <script>var elements = $('.sticky'); Stickyfill.add(elements);</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
