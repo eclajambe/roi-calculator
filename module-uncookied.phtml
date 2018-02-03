@@ -1,4 +1,4 @@
-<?php include 'inc/head.php' ?>
+<?php include 'inc/head.php'; ?>
 
     <body>
 
@@ -19,16 +19,18 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="border--lt-grey eq-height p-4">
-                            <p>How many employees in your company?</p>
                             
-                            <div class="range-wrap">
-                                <input type="range" id="js-amount-range" class="sliderRange" min="5" max="1000" step="1" value="650">
-                            </div><!--// .range-wrap -->
-
-                            <div class="value-toggle">
-                                <input type="number" id="js-amount-input" class="value-number" min="5" max="1000" step="1" value="650"></input>
-                                <span class="value-unit"># of employees</span>
-                            </div><!--// .value-toggle -->
+                            <?php echo question(
+                                    0, // Wrap in BS column? (bool)
+                                    'How many employees in your company?', //question
+                                    '5', // min
+                                    '1000', // max 
+                                    '1', // step
+                                    '650', // value
+                                    '# of employees', // unit
+                                    'employee_count' // id
+                                ); 
+                            ?>
 
                         </div><!--// .border--lt-grey -->
                     </div><!--// .col-sm-4 -->
@@ -36,7 +38,7 @@
                         <div class="border--lt-grey eq-height p-4">
                             <p>Typical number of expense reports filed per year</p>
                             <div class="value-outcome align-bottom">
-                                <span id="value-number" class="value-number">2500</span><span class="value-unit"># reports filed</span>
+                                <span id="reports_filed" class="value-number">2,600</span><span class="value-unit"># reports filed</span>
                             </div><!--// .value-outcome -->
                         </div><!--// .border--lt-grey -->    
                     </div><!--// .col-sm-4 -->
@@ -53,7 +55,7 @@
 
         <?php echo placeholderModule('cta', '','Placeholder CTA', 1); ?>
 
-        <?php include 'inc/footer-scripts.inc'; ?>
+        <?php include 'inc/footer-scripts.php'; ?>
         
     </body>
 </html>

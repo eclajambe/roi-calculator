@@ -6,7 +6,7 @@
             <div class="container">     
                 
                 <div id="hero" class="row justify-content-md-center pt-5 pb-4">
-                    <div class="col-sm-8 text-center">
+                    <div class="col-sm-12 col-md-8 text-center">
                         <h4 class="tool-name text-uppercase">ROI Calculator</h5>
                         <h1 class="mb-4">Concur Expense ROI Calculator</h1>
                         <p>Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -15,7 +15,10 @@
 
                 <div class="row">
 
-                    <div id="calculator" class="col-sm-7">
+                    <div id="calculator" class="col-md-7">
+
+                        <h3 class="mb-4">Your company details</h3>
+
                         <div id="company-info" class="category-container border--lt-grey" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingOne">
@@ -29,6 +32,7 @@
                                     <div class="row px-4 pb-4">
 
         								<?php echo question(
+                                                1, // Wrap in BS column? (bool)
                                                 'How many employees in your company?', //question
         										'1', // min
         										'1000', // max 
@@ -59,6 +63,7 @@
                                     <div class="row px-4 pb-4">
 
 								<?php echo question(
+                                        1, // Wrap in BS column? (bool)
 										'How many expense report filers do you have?', //question
 										'1', // min
 										'50', // max 
@@ -70,6 +75,7 @@
 								?>
 
 								<?php echo question(
+                                        1, // Wrap in BS column? (bool)
 										'Number of expense reports per filer/month?', //question
 										'1', // min
 										'50', // max 
@@ -100,6 +106,7 @@
                                      <div class="row px-4 pb-4">
 
 								<?php echo question(
+                                        1, // Wrap in BS column? (bool)
 										'Percentage of spend that is out of policy?', //question
 										'0', // min
 										'100', // max 
@@ -111,6 +118,7 @@
 								?>  
 
 								<?php echo question(
+                                        1, // Wrap in BS column? (bool)
 										'Percentage of travelers who pad their expense report?', //question
 										'0', // min
 										'50', // max 
@@ -126,6 +134,7 @@
                                     <div class="row px-4 pb-4">
 
 								<?php echo question(
+                                        1, // Wrap in BS column? (bool)
 										'Average amount fraudulently claimed?', //question
 										'5', // min
 										'1000', // max 
@@ -156,6 +165,7 @@
                                     <div class="row px-4 pb-4">
 
 								<?php echo question(
+                                        1, // Wrap in BS column? (bool)
 										'Time it takes to create an expense report?', //question
 										'1', // min
 										'100', // max 
@@ -167,6 +177,7 @@
 								?> 
 
 								<?php echo question(
+                                        1, // Wrap in BS column? (bool)
 										'Time it takes a manager to review and approve each report?', //question
 										'1', // min
 										'100', // max 
@@ -182,6 +193,7 @@
                                     <div class="row px-4 pb-4">
 
 								<?php echo question(
+                                        1, // Wrap in BS column? (bool)
 										'Time it takes for a back office employee to review and approve?', //question
 										'1', // min
 										'100', // max 
@@ -193,6 +205,7 @@
 								?> 
 
 								<?php echo question(
+                                        1, // Wrap in BS column? (bool)
 										'Time it takes to create a reimbursement check?', //question
 										'1', // min
 										'100', // max 
@@ -222,11 +235,11 @@
             <div id="form" class="hidden container py-5">
                 <div class="row">
                     
-                    <div class="col-sm-5">
+                    <div class="col-sm-12 col-md-5">
                         <h5>Receive your ROI results</h5>
                         <p>In the real experience, this form will function the same as a premium asset form. For this prototype, you do not need to fill out any of the fields, instead just click the submit button.</p>
                     </div><!--// .col-sm-4 -->
-                    <div class="col-sm-7">
+                    <div class="col-sm-12 col-md-7 mt-sm-4">
                         <form class="premium-form">
                             <div class="form-group row">
                                 
@@ -291,7 +304,7 @@
         <?php echo placeholderModule('content', 'right', 'Placeholder module', 0); ?>
         <?php echo placeholderModule('cta', '','Placeholder CTA', 1); ?>
 
-        <?php include 'inc/footer-scripts.inc'; ?>
+        <?php include 'inc/footer-scripts.php'; ?>
 
     </body>
 </html>

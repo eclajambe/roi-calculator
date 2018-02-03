@@ -24,6 +24,7 @@
 
     </head>
 
+<?php if ($header !== false) : ?>
     <header id="header" class="container-fluid">
         <div class="container">
             <div class="row">
@@ -33,3 +34,4 @@
             </div><!--// .row -->
         </div><!--// .container -->
     </header>
+<?php endif; ?>

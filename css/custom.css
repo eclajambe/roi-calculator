@@ -24,7 +24,7 @@ img {
 	background: #DDD;
 }
 .ph-module {
-	opacity: 0.6;
+	opacity: 0.5;
 }
 .ph-heading {
 	height: 50px;
@@ -34,6 +34,7 @@ img {
 }
 .ph-image {
 	height: 100%;
+	min-height: 200px;
 }
 .ph-image h1 {
 	position: relative;
@@ -54,14 +55,18 @@ img {
 	background-color: #DDD;
 }
 
-.bt-0 {border-top: 0 !important;}
-.br-0 {border-right: 0 !important;}
-.bb-0 {border-bottom: 0 !important;}
-.bl-0 {border-left: 0 !important;}
+.bt-0 {border-top: 0;}
+.br-0 {border-right: 0;}
+.bb-0 {border-bottom: 0;}
+.bl-0 {border-left: 0;}
 .r-tl {border-top-left-radius: 1px;}
 .r-tr {border-top-right-radius: 1px;}
 .r-br {border-bottom-right-radius: 1px;}
 .r-bl {border-bottom-left-radius: 1px;}
+
+@media (max-width: 991px) {
+	#sidebar .br-0 {border-right: 1px solid #CCC;}
+}
 
 .highlight {
 	color: #008FD3;
@@ -93,8 +98,15 @@ footer {
 	border: none;
 	border-radius: 1px;		
 }
-.btn:hover {
+.btn:hover,
+.btn:active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn:focus {
 	background-color: #00A9F2;
+	outline: none;
+	border: none;
+	box-shadow: none;
 }
 body {
 	font-family: "BentonSans", Arial, sans-serif;
@@ -144,17 +156,21 @@ a:focus {
 }
 .value-number {
 	display: block;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
-    line-height: 50px;
+    line-height: 30px;
 	border: 0;
 	width: 100%;
 	height: 50px;
 }
 .value-number.sm {
-	font-size: 30px;
-	line-height: 30px;
 	height: auto;
+}
+@media (min-width: 991px) {
+	.value-number:not(.sm) {
+		font-size: 50px;
+		line-height: 50px;
+	}
 }
 .value-toggle.sliding .value-number,
 .value-number:focus {
@@ -170,9 +186,15 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 .value-unit {
-	display: block;
+	display: inline-block;
 	font-size: 16px;
 	color: #333;
+}
+.more-info {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    float: right;
 }
 .value-outcome {
 	color: #F0AB00;
@@ -252,6 +274,10 @@ h3.panel-title {
 
 #calculator .category-container:not(:last-of-type) {
 	margin-bottom: 30px;
+}
+.category-title:not(.collapsed) {
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 1.5rem;
 }
 
 .sticky {

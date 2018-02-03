@@ -1,12 +1,12 @@
-<?php include 'inc/head.php' ?>
+<?php include 'inc/head.php'; ?>
 
     <body>
 
         <div id="main-content" class="container-fluid bg--white">
             <div class="container">     
                 
-                <div id="hero" class="row justify-content-sm-center pt-5 pb-4">
-                    <div class="col-sm-8 text-center">
+                <div id="hero" class="row justify-content-md-center pt-5 pb-4">
+                    <div class="col-sm-12 col-md-8 text-center">
                         <h4 class="tool-name text-uppercase">ROI Calculator</h5>
                         <h1 class="mb-4">Concur Expense ROI Calculator</h1>
                         <p>Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
@@ -28,7 +28,10 @@
 
                 <div class="row">
 
-                    <div id="calculator" class="col-sm-7">
+                    <div id="calculator" class="col-md-7">
+
+                        <h3 class="mb-4">Your company details</h3>
+
                         <div id="company-info" class="category-container border--lt-grey" role="tablist" aria-multiselectable="true">
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingOne">
@@ -39,15 +42,17 @@
                                     </h3>
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="row px-4 pb-4">
+                                    <div class="row px-4">
 
                                         <?php echo question(
+                                                1, // Wrap in BS column? (bool)
                                                 'How many employees in your company?', //question
                                                 '1', // min
                                                 '1000', // max 
                                                 '1', // step
                                                 '650', // value
-                                                '# of employees' // unit
+                                                '# of employees', // unit
+                                                'employee_count' // id
                                             ); 
                                         ?>
                                 
@@ -68,27 +73,31 @@
                                 </div>
                                 <div id="collapseTwo" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingTwo">
                                     
-                                    <div class="row px-4 pb-4">
+                                    <div class="row px-4">
 
-                                <?php echo question(
-                                        'How many expense report filers do you have?', //question
-                                        '1', // min
-                                        '50', // max 
-                                        '1', // step
-                                        '20', // value
-                                        '# of filers' // unit
-                                    ); 
-                                ?>
+                                        <?php echo question(
+                                                1, // Wrap in BS column? (bool)
+                                                'How many expense report filers do you have?', //question
+                                                '1', // min
+                                                '50', // max 
+                                                '1', // step
+                                                '20', // value
+                                                '# of filers', // unit
+                                                'expense_count' // id
+                                            ); 
+                                        ?>
 
-                                <?php echo question(
-                                        'Number of expense reports per filer/month?', //question
-                                        '1', // min
-                                        '50', // max 
-                                        '1', // step
-                                        '2', // value
-                                        '# reports/month' // unit
-                                    ); 
-                                ?>
+                                        <?php echo question(
+                                                1, // Wrap in BS column? (bool)
+                                                'Number of expense reports per filer/month?', //question
+                                                '1', // min
+                                                '50', // max 
+                                                '1', // step
+                                                '2', // value
+                                                '# reports/month', // unit
+                                                'expense_per_month' // id
+                                            ); 
+                                        ?>
 
                                     </div><!--// .row -->                                  
 
@@ -107,25 +116,29 @@
                                 </div>
                                 <div id="collapseThree" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingThree">
                                     
-                                     <div class="row px-4 pb-4">
+                                     <div class="row px-4">
 
                                 <?php echo question(
+                                        1, // Wrap in BS column? (bool)
                                         'Percentage of spend that is out of policy?', //question
                                         '0', // min
                                         '100', // max 
                                         '1', // step
                                         '20', // value
-                                        '# of employees' // unit
+                                        '# of employees', // unit
+                                        'out_of_spend_percent' // id
                                     ); 
                                 ?>  
 
                                 <?php echo question(
+                                        1, // Wrap in BS column? (bool)
                                         'Percentage of travelers who pad their expense report?', //question
                                         '0', // min
                                         '50', // max 
                                         '1', // step
                                         '17', // value
-                                        '# of employees' // unit
+                                        '# of employees', // unit
+                                        'report_pad_percent' // id
                                     ); 
                                 ?>  
                                     
@@ -134,12 +147,14 @@
                                     <div class="row px-4 pb-4">
 
                                 <?php echo question(
+                                        1, // Wrap in BS column? (bool)
                                         'Average amount fraudulently claimed?', //question
                                         '5', // min
                                         '1000', // max 
                                         '1', // step
                                         '50', // value
-                                        '# of employees' // unit
+                                        '# of employees', // unit
+                                        'fraud_average' // id
                                     ); 
                                 ?> 
 
@@ -160,25 +175,29 @@
                                 </div>
                                 <div id="collapseFour" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingFour">
                                     
-                                    <div class="row px-4 pb-4">
+                                    <div class="row px-4">
 
                                 <?php echo question(
+                                        1, // Wrap in BS column? (bool)
                                         'Time it takes to create an expense report?', //question
                                         '1', // min
                                         '100', // max 
                                         '1', // step
                                         '5', // value
-                                        'min' // unit
+                                        'min', // unit
+                                        'expense_time' // id
                                     ); 
                                 ?> 
 
                                 <?php echo question(
-                                        'ime it takes a manager to review and approve each report?', //question
+                                        1, // Wrap in BS column? (bool)
+                                        'Time it takes a manager to review and approve each report?', //question
                                         '1', // min
                                         '100', // max 
                                         '1', // step
                                         '11', // value
-                                        'min' // unit
+                                        'min', // unit
+                                        'review_time' // id
                                     ); 
                                 ?> 
 
@@ -187,22 +206,26 @@
                                     <div class="row px-4 pb-4">
 
                                 <?php echo question(
+                                        1, // Wrap in BS column? (bool)
                                         'Time it takes for a back office employee to review and approve?', //question
                                         '1', // min
                                         '100', // max 
                                         '1', // step
                                         '20', // value
-                                        'min' // unit
+                                        'min', // unit
+                                        'back_employee_time' // id
                                     ); 
                                 ?> 
 
                                 <?php echo question(
+                                        1, // Wrap in BS column? (bool)
                                         'Time it takes to create a reimbursement check?', //question
                                         '1', // min
                                         '100', // max 
                                         '1', // step
                                         '20', // value
-                                        'min' // unit
+                                        'min', // unit
+                                        'reimbursement_time' // id
                                     ); 
                                 ?>
                                         
@@ -226,7 +249,7 @@
         <?php echo placeholderModule('content', 'right', 'Section headline', 0); ?>
         <?php echo placeholderModule('cta', '','CTA Headline', 1); ?>
 
-        <?php include 'inc/footer-scripts.inc'; ?>
+        <?php include 'inc/footer-scripts.php'; ?>
         
     </body>
 </html>

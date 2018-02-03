@@ -70,8 +70,10 @@ function propagate_out(slide_id, value, ignore) {
     }
 
     // Generate random results for demo purposes
+    var reports_filed = numberWithCommas(total*4);
+    $('#reports_filed').text(reports_filed); 
+    // Generate random results for demo purposes
     var final_score = numberWithCommas(20000 + total*175);
-
     $('#final_score').text("$" + final_score); 
     // Generate random results for demo purposes
     var final_efficiency = (3.5 + total / 7).toFixed(1);
@@ -80,7 +82,7 @@ function propagate_out(slide_id, value, ignore) {
 
 
 // Update sliders on text input change or keyup
-$('.js-amount-input').each( function() {
+$('.value-number').each( function() {
     $(this).on('change keyup', function() {
         var slide_id = strange_substring($(this)[0].id)
         var old_number = slide_data[slide_id];
