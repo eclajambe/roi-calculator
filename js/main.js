@@ -122,25 +122,38 @@ $('.reveal-form').click(function() {
 });
 
 
-// EVAN-03
+
 // Artifically click a button:
 //    $('#employee-expense-distribution .category-title').click();
-
-// EVAN-04
 // Uses jQuery's default hide/show
-
-$('#employee-expense-distribution .category-title').on(
-    'click',
-    function() {
-        $('#reverseCollapseTwo').toggle(400);
-    }
-)
-
-// EVAN-08
-// More code reuse. :-(
 $('#company-info .category-title').on(
     'click',
     function() {
         $('#reverseCollapseOne').toggle(400);
     }
 )
+$('#employee-expense-distribution .category-title').on(
+    'click',
+    function() {
+        $('#reverseCollapseTwo').toggle(400);
+    }
+)
+$('#losses-fraud-violations .category-title').on(
+    'click',
+    function() {
+        $('#reverseCollapseThree').toggle(400);
+    }
+)
+$('#time-effort .category-title').on(
+    'click',
+    function() {
+        $('#reverseCollapseFour').toggle(400);
+    }
+)
+
+if ( $('body').hasClass('disable-input') ) {
+    $( '.category-title' ).each().css( 'display', 'none' );
+}
+
+
+

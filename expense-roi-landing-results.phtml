@@ -1,6 +1,6 @@
 <?php include 'inc/head.php'; ?>
 
-    <body>
+    <body id="roi-results" class="disable-input">
 
         <div id="main-content" class="container-fluid bg--white">
             <div class="container">     
@@ -14,11 +14,11 @@
                 </div><!--// .row -->
 
                 <div class="row justify-content-sm-center mb-5">
-                    <div class="col-sm-3">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="border--lt-grey eq-height p-4 text-center">
                             <a href="#" class="icon-link"><img src="img/share-icon@2x.png" height="22px" /> Share this tool</a>
                         </div>
-                    </div><!--// .col-sm-6 -->
+                    </div><!--// .col-sm-3 -->
                 </div><!--// .row --> 
 
                 <div class="row">
@@ -37,7 +37,7 @@
                                     </h3>
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="row px-4">
+                                    <div class="row px-4 pb-4">
 
                                         <?php echo question(
                                                 1, // Wrap in BS column? (bool)
@@ -52,8 +52,21 @@
                                         ?>
                                 
                                      </div><!-- // .row -->                              
-
                                 </div><!--// .panel-collapse -->
+
+                                <div id="reverseCollapseOne" class="reverse-collapse container">
+                                    
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>How many employees in your company?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-right">
+                                            <span id="extra-employee_count" class="collapsed-value">650</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->
+
+                                </div><!--// .reverse-collapse -->
+
                             </div><!--// .panel -->
                         </div><!--// .category-container.border--lt-grey -->
 
@@ -61,14 +74,14 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h3 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#employee-expense-distribution" href="#collapseTwo" class="category-title p-4" aria-expanded="true" aria-controls="collapseTwo">
+                                        <a data-toggle="collapse" data-parent="#employee-expense-distribution" href="#collapseTwo" class="category-title p-4 collapsed" aria-expanded="true" aria-controls="collapseTwo">
                                             Employee expense and distribution
                                         </a>
                                     </h3>
                                 </div>
-                                <div id="collapseTwo" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingTwo">
+                                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
                                     
-                                    <div class="row px-4">
+                                    <div class="row px-4 pb-4">
 
                                         <?php echo question(
                                                 1, // Wrap in BS column? (bool)
@@ -97,6 +110,29 @@
                                     </div><!--// .row -->                                  
 
                                 </div><!--// .panel-collapse -->
+
+                                <div id="reverseCollapseTwo" class="reverse-collapse container">
+                                    
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>How many expense report filers do you have?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-right">
+                                            <span id="extra-expense_count" class="collapsed-value">20</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->   
+
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Number of expense reports per filer/month?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-right">
+                                            <span id="extra-expense_per_month" class="collapsed-value">2</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->  
+
+                                </div><!--// .reverse-collapse -->
+                                
                             </div><!--// .panel -->
                         </div><!--// .category-container.border--lt-grey -->
 
@@ -104,58 +140,90 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                     <h3 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#losses-fraud-violations" href="#collapseThree" class="category-title p-4" aria-expanded="true" aria-controls="collapseThree">
+                                        <a data-toggle="collapse" data-parent="#losses-fraud-violations" href="#collapseThree" class="category-title p-4 collapsed" aria-expanded="true" aria-controls="collapseThree">
                                             Loss due to fraud and violations
                                         </a>
                                     </h3>
                                 </div>
-                                <div id="collapseThree" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingThree">
+                                <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
                                     
-                                     <div class="row px-4">
+                                     <div class="row px-4 pb-4">
 
-                                <?php echo question(
-                                        1, // Wrap in BS column? (bool)
-                                        'Percentage of spend that is out of policy?', //question
-                                        '0', // min
-                                        '100', // max 
-                                        '1', // step
-                                        '20', // value
-                                        '# of employees', // unit
-                                        'out_of_spend_percent' // id
-                                    ); 
-                                ?>  
+                                        <?php echo question(
+                                                1, // Wrap in BS column? (bool)
+                                                'Percentage of spend that is out of policy?', //question
+                                                '0', // min
+                                                '100', // max 
+                                                '1', // step
+                                                '20', // value
+                                                '# of employees', // unit
+                                                'out_of_spend_percent' // id
+                                            ); 
+                                        ?>  
 
-                                <?php echo question(
-                                        1, // Wrap in BS column? (bool)
-                                        'Percentage of travelers who pad their expense report?', //question
-                                        '0', // min
-                                        '50', // max 
-                                        '1', // step
-                                        '17', // value
-                                        '# of employees', // unit
-                                        'report_pad_percent' // id
-                                    ); 
-                                ?>  
+                                        <?php echo question(
+                                                1, // Wrap in BS column? (bool)
+                                                'Percentage of travelers who pad their expense report?', //question
+                                                '0', // min
+                                                '50', // max 
+                                                '1', // step
+                                                '17', // value
+                                                '# of employees', // unit
+                                                'report_pad_percent' // id
+                                            ); 
+                                        ?>  
                                     
                                     </div><!--// .row -->
 
                                     <div class="row px-4 pb-4">
 
-                                <?php echo question(
-                                        1, // Wrap in BS column? (bool)
-                                        'Average amount fraudulently claimed?', //question
-                                        '5', // min
-                                        '1000', // max 
-                                        '1', // step
-                                        '50', // value
-                                        '# of employees', // unit
-                                        'fraud_average' // id
-                                    ); 
-                                ?> 
+                                        <?php echo question(
+                                                1, // Wrap in BS column? (bool)
+                                                'Average amount fraudulently claimed?', //question
+                                                '5', // min
+                                                '1000', // max 
+                                                '1', // step
+                                                '50', // value
+                                                '# of employees', // unit
+                                                'fraud_average' // id
+                                            ); 
+                                        ?> 
 
                                     </div><!--// .row -->                         
 
                                 </div><!--// .panel-collapse -->
+
+                                <div id="reverseCollapseThree" class="reverse-collapse container">
+                                    
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Percentage of spend that is out of policy?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-right">
+                                            <span id="extra-out_of_spend_percent" class="collapsed-value">20</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row --> 
+
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Percentage of travelers who pad their expense report?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-right">
+                                            <span id="extra-report_pad_percent" class="collapsed-value">17</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->
+
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Average amount fraudulently claimed?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-right">
+                                            <span id="extra-fraud_average" class="collapsed-value">50</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->
+
+                                </div><!--// .reverse-collapse -->
+
                             </div><!--// .panel -->
                         </div><!--// .category-container.border--lt-grey -->
 
@@ -163,70 +231,111 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingFour">
                                     <h3 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#time-effort" href="#collapseFour" class="category-title p-4" aria-expanded="true" aria-controls="collapseFour">
+                                        <a data-toggle="collapse" data-parent="#time-effort" href="#collapseFour" class="category-title p-4 collapsed" aria-expanded="true" aria-controls="collapseFour">
                                             Time and effort
                                         </a>
                                     </h3>
                                 </div>
-                                <div id="collapseFour" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingFour">
+                                <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
                                     
-                                    <div class="row px-4">
+                                    <div class="row px-4 pb-4">
 
-                                <?php echo question(
-                                        1, // Wrap in BS column? (bool)
-                                        'Time it takes to create an expense report?', //question
-                                        '1', // min
-                                        '100', // max 
-                                        '1', // step
-                                        '5', // value
-                                        'min', // unit
-                                        'expense_time' // id
-                                    ); 
-                                ?> 
+                                        <?php echo question(
+                                                1, // Wrap in BS column? (bool)
+                                                'Time it takes to create an expense report?', //question
+                                                '1', // min
+                                                '100', // max 
+                                                '1', // step
+                                                '5', // value
+                                                'min', // unit
+                                                'expense_time' // id
+                                            ); 
+                                        ?> 
 
-                                <?php echo question(
-                                        1, // Wrap in BS column? (bool)
-                                        'Time it takes a manager to review and approve each report?', //question
-                                        '1', // min
-                                        '100', // max 
-                                        '1', // step
-                                        '11', // value
-                                        'min', // unit
-                                        'review_time' // id
-                                    ); 
-                                ?> 
+                                        <?php echo question(
+                                                1, // Wrap in BS column? (bool)
+                                                'Time it takes a manager to review and approve each report?', //question
+                                                '1', // min
+                                                '100', // max 
+                                                '1', // step
+                                                '11', // value
+                                                'min', // unit
+                                                'review_time' // id
+                                            ); 
+                                        ?> 
 
                                     </div><!--// .row -->
 
                                     <div class="row px-4 pb-4">
 
-                                <?php echo question(
-                                        1, // Wrap in BS column? (bool)
-                                        'Time it takes for a back office employee to review and approve?', //question
-                                        '1', // min
-                                        '100', // max 
-                                        '1', // step
-                                        '20', // value
-                                        'min', // unit
-                                        'back_employee_time' // id
-                                    ); 
-                                ?> 
+                                        <?php echo question(
+                                                1, // Wrap in BS column? (bool)
+                                                'Time it takes for a back office employee to review and approve?', //question
+                                                '1', // min
+                                                '100', // max 
+                                                '1', // step
+                                                '20', // value
+                                                'min', // unit
+                                                'back_employee_time' // id
+                                            ); 
+                                        ?> 
 
-                                <?php echo question(
-                                        1, // Wrap in BS column? (bool)
-                                        'Time it takes to create a reimbursement check?', //question
-                                        '1', // min
-                                        '100', // max 
-                                        '1', // step
-                                        '20', // value
-                                        'min', // unit
-                                        'reimbursement_time' // id
-                                    ); 
-                                ?>
+                                        <?php echo question(
+                                                1, // Wrap in BS column? (bool)
+                                                'Time it takes to create a reimbursement check?', //question
+                                                '1', // min
+                                                '100', // max 
+                                                '1', // step
+                                                '20', // value
+                                                'min', // unit
+                                                'reimbursement_time' // id
+                                            ); 
+                                        ?>
                                         
                                     </div><!--// .row -->
 
                                 </div><!--// .panel-collapse -->
+
+                                <div id="reverseCollapseFour" class="reverse-collapse container">
+                                    
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Time it takes to create an expense report?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-right">
+                                            <span id="extra-out_of_spend_percent" class="collapsed-value">5</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row --> 
+
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Time it takes a manager to review and approve each report?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-right">
+                                            <span id="extra-report_pad_percent" class="collapsed-value">11</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->
+
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Time it takes for a back office employee to review and approve?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-right">
+                                            <span id="extra-fraud_average" class="collapsed-value">20</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->
+
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Time it takes to create a reimbursement check?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-right">
+                                            <span id="extra-fraud_average" class="collapsed-value">20</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->
+
+                                </div><!--// .reverse-collapse -->
+
                             </div><!--// .panel -->
                         </div><!--// .category-container.border--lt-grey -->
 
