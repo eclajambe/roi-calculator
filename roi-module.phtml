@@ -1,4 +1,6 @@
-<?php include 'inc/head.php'; ?>
+<?php 
+include 'inc/head.php'; 
+?>
 
     <body>
 
@@ -45,7 +47,7 @@
                     <div class="col-sm-4">
                         <div class="border--lt-grey eq-height p-4">
                             <p>For a customized ROI report, please visit our ROI Calculator</p>
-                            <a class="btn btn-primary align-bottom" href="expense-roi-landing-uncookied.phtml">Calculate your ROI</a>
+                            <a id="pass-cookie" class="btn btn-primary align-bottom" href="expense-roi-landing-uncookied.phtml">Calculate your ROI</a>
                         </div><!--// .border--lt-grey -->    
                     </div><!--// .col-sm-4 -->
                 </div><!--// .row -->
@@ -56,6 +58,15 @@
         <?php echo placeholderModule('cta', '','Placeholder CTA', 1); ?>
 
         <?php include 'inc/footer-scripts.php'; ?>
+        
+        <script>
+            //setCookie('formcookie','testcookie',7);
+
+            var x = getCookie('formcookie');
+            if (x) {
+                $('#pass-cookie').attr("href", "expense-roi-landing-cookied.phtml")
+            }        
+        </script>
         
     </body>
 </html>

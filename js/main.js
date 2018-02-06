@@ -81,6 +81,10 @@ function propagate_out(slide_id, value, ignore) {
     // Generate random results for demo purposes
     var final_efficiency = (3.5 + total / 7).toFixed(1);
     $('#final_efficiency').text(final_efficiency + "%"); 
+    // Generate random results for demo purposes
+    var final_roi = numberWithCommas(284000 + total*175);
+    $('#final_roi').text("$" + final_roi);  
+
 }
 
 
@@ -155,5 +159,28 @@ if ( $('body').hasClass('disable-input') ) {
     $( '.category-title' ).each().css( 'display', 'none' );
 }
 
-
-
+/**
+    Set Cookies!
+**/
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {   
+    document.cookie = name+'=; Max-Age=-99999999;';  
+}

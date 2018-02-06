@@ -1,6 +1,6 @@
                     <div id="sidebar" class="col-md-5 mt-4 mt-md-0">
                         
-                        <h3 class="mb-4">Your calculated results</h3>
+                        <h3 class="mb-4">Your estimated ROI</h3>
 
                         <div class="sticky">
 
@@ -24,7 +24,7 @@
                                 <div id="projected-roi" class="col-sm-12 text-center">
                                     <div class="border--lt-gold eq-height p-4 r-br r-bl">
                                         <p>Estimated yearly ROI</p>
-                                        <span class="value-number gold-text">$284,000</span>
+                                        <span id="final_roi" class="value-number gold-text">$284,000</span>
                                         <a href="img/ConcurROICalculatorResults.pdf" class="btn btn-primary mt-3" download>Download results</a>
                                     </div><!--// .border--lt-grey -->
                                 </div><!--// .col-sm-12 -->

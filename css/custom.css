@@ -161,7 +161,7 @@ a:focus {
     line-height: 30px;
 	border: 0;
 	width: 100%;
-	height: 50px;
+	height: 30px;
 }
 .value-number.sm {
 	height: auto;
@@ -170,6 +170,7 @@ a:focus {
 	.value-number:not(.sm) {
 		font-size: 50px;
 		line-height: 50px;
+		height: 50px;
 	}
 }
 .value-toggle.sliding .value-number,

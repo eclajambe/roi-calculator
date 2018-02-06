@@ -1,6 +1,6 @@
                     <div id="sidebar" class="col-md-5 mt-4 mt-md-0">
 
-                        <h3 class="mb-4">Your calculated results</h3>
+                        <h3 class="mb-4">Your estimated ROI</h3>
 
                         <div class="sticky">
 

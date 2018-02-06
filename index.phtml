@@ -24,7 +24,7 @@
                         <div class="border--lt-grey eq-height p-4">
                             
                             <h5 class="mb-4">I am a user that <span class="highlight">HAS</span> previously filled out a form on concur.com</h5>
-                            <a class="btn btn-primary align-bottom" href="module-uncookied.phtml">Uncookied experience</a>
+                            <a class="btn btn-primary align-bottom" href="roi-module.phtml">Uncookied experience</a>
 
                         </div><!--// .border--lt-grey -->
                     </div><!--// .col-sm-4 -->
@@ -33,7 +33,7 @@
                         <div class="border--lt-grey eq-height p-4">
 
                             <h5 class="mb-4">I am a user that <span class="highlight">HAS NOT</span> previously filled out a form on concur.com</h5>
-                            <a class="btn btn-primary" href="module-cookied.phtml">Cookied experience</a>
+                            <a id="pass-cookie" class="btn btn-primary" href="roi-module.phtml">Cookied experience</a>
 
                         </div><!--// .border--lt-grey -->    
                     </div><!--// .col-sm-4 -->
@@ -44,6 +44,13 @@
         </div><!--// .container-fluid -->
 
         <?php include 'inc/footer-scripts.php'; ?>
+
+        <script>
+            // Pass 'form' cookie if user chooese cookied version
+            $( '#pass-cookie' ).click(function() {
+                setCookie('formcookie','testcookie',7);
+            });
+        </script>
         
     </body>
 </html>
