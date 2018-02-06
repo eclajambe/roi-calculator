@@ -59,6 +59,9 @@ function propagate_out(slide_id, value, ignore) {
         $('#slider-'+slide_id).val(value).change();
     }
 
+    // EVAN-06: this changes the number in the gray box.
+    $('#extra-'+slide_id).text(value);
+
     total = 0;
     for (var i in slide_data) {
         total += slide_data[i];
@@ -117,3 +120,27 @@ $('.reveal-form').click(function() {
         scrollTop: $('#form').offset().top
     }, 200);
 });
+
+
+// EVAN-03
+// Artifically click a button:
+//    $('#employee-expense-distribution .category-title').click();
+
+// EVAN-04
+// Uses jQuery's default hide/show
+
+$('#employee-expense-distribution .category-title').on(
+    'click',
+    function() {
+        $('#reverseCollapseTwo').toggle(400);
+    }
+)
+
+// EVAN-08
+// More code reuse. :-(
+$('#company-info .category-title').on(
+    'click',
+    function() {
+        $('#reverseCollapseOne').toggle(400);
+    }
+)

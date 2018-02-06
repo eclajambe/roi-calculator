@@ -290,3 +290,12 @@ h3.panel-title {
     content: '';
     display: table;
 }
+
+.reverse-collapse {
+	background-color: #c0c0c0;
+}
+.reverse-collapse.start-as-hidden {
+	/* EVAN-02 */
+	/* This becomes visible through jQuery. */
+	display: none;
+}
