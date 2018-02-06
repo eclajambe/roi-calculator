@@ -291,6 +291,22 @@ body.disable-input .panel-heading .panel-title a:after {
     content: '';
     display: table;
 }
+.currency-bg {
+	position: relative;
+	padding: 20px 0 30px;
+}
+.currency-bg:before {
+    content: '$';
+    font-size: 110px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: bold;
+    color: #efefef;
+    z-index: -1;
+}
+
 
 .reverse-collapse {
 	background-color: #EFEFEF;

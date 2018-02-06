@@ -18,7 +18,6 @@ function question($colWrap, $question, $min, $max, $step, $value, $unit, $id='')
 
 	$colWrap = ($colWrap == true ) ? 'col-xs-12 col-sm-6 col-md-6 pb-4' : '';
 
-	// TODO: is "js-amount-input" necessary?
 	$data  = '<div class="' . $colWrap . '">';
 	$data .= '  <div id="q-container-'.$id.'">';
 	$data .= 	'<p>' . $question . '</p>'; 

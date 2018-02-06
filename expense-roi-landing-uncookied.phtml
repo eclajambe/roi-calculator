@@ -29,7 +29,7 @@
                                     </h3>
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="row px-4 pb-4">
+                                    <div class="row px-4">
 
         								<?php echo question(
                                                 1, // Wrap in BS column? (bool)
@@ -73,7 +73,7 @@
                                 </div>
                                 <div id="collapseTwo" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingTwo">
                                     
-                                    <div class="row px-4 pb-4">
+                                    <div class="row px-4">
 
         								<?php echo question(
                                                 1, // Wrap in BS column? (bool)
@@ -139,7 +139,7 @@
                                 </div>
                                 <div id="collapseThree" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingThree">
                                     
-                                     <div class="row px-4 pb-4">
+                                     <div class="row px-4">
 
         								<?php echo question(
                                                 1, // Wrap in BS column? (bool)
@@ -148,7 +148,7 @@
         										'100', // max 
         										'1', // step
         										'20', // value
-        										'# of employees', // unit
+        										'%', // unit
                                                 'out_of_spend_percent' // id
         									); 
         								?>  
@@ -160,14 +160,14 @@
         										'50', // max 
         										'1', // step
         										'17', // value
-        										'# of employees', // unit
+        										'%', // unit
                                                 'report_pad_percent' // id
         									); 
         								?>  
                                     
                                     </div><!--// .row -->
 
-                                    <div class="row px-4 pb-4">
+                                    <div class="row px-4">
 
         								<?php echo question(
                                                 1, // Wrap in BS column? (bool)
@@ -176,7 +176,7 @@
         										'1000', // max 
         										'1', // step
         										'50', // value
-        										'# of employees', // unit
+        										'$ claimed', // unit
                                                 'fraud_average' // id
         									); 
         								?> 
@@ -230,7 +230,7 @@
                                 </div>
                                 <div id="collapseFour" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingFour">
                                     
-                                    <div class="row px-4 pb-4">
+                                    <div class="row px-4">
 
         								<?php echo question(
                                                 1, // Wrap in BS column? (bool)
@@ -258,7 +258,7 @@
 
                                     </div><!--// .row -->
 
-                                    <div class="row px-4 pb-4">
+                                    <div class="row px-4">
 
         								<?php echo question(
                                                 1, // Wrap in BS column? (bool)
@@ -295,7 +295,7 @@
                                             <p>Time it takes to create an expense report?</p>
                                         </div><!--// .col-sm-10 -->
                                         <div class="col-sm-2 text-right">
-                                            <span id="extra-out_of_spend_percent" class="collapsed-value">5</span>
+                                            <span id="extra-expense_time" class="collapsed-value">5</span>
                                         </div><!--// .col-sm-2 -->
                                     </div><!--// .row --> 
 
@@ -304,7 +304,7 @@
                                             <p>Time it takes a manager to review and approve each report?</p>
                                         </div><!--// .col-sm-10 -->
                                         <div class="col-sm-2 text-right">
-                                            <span id="extra-report_pad_percent" class="collapsed-value">11</span>
+                                            <span id="extra-review_time" class="collapsed-value">11</span>
                                         </div><!--// .col-sm-2 -->
                                     </div><!--// .row -->
 
@@ -313,7 +313,7 @@
                                             <p>Time it takes for a back office employee to review and approve?</p>
                                         </div><!--// .col-sm-10 -->
                                         <div class="col-sm-2 text-right">
-                                            <span id="extra-fraud_average" class="collapsed-value">20</span>
+                                            <span id="extra-back_employee_time" class="collapsed-value">20</span>
                                         </div><!--// .col-sm-2 -->
                                     </div><!--// .row -->
 
@@ -322,7 +322,7 @@
                                             <p>Time it takes to create a reimbursement check?</p>
                                         </div><!--// .col-sm-10 -->
                                         <div class="col-sm-2 text-right">
-                                            <span id="extra-fraud_average" class="collapsed-value">20</span>
+                                            <span id="extra-reimbursement_time" class="collapsed-value">20</span>
                                         </div><!--// .col-sm-2 -->
                                     </div><!--// .row -->
 

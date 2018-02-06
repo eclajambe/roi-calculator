@@ -16,7 +16,7 @@
                 <div class="row justify-content-sm-center mb-5">
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="border--lt-grey eq-height p-4 text-center">
-                            <a href="#" class="icon-link"><img src="img/share-icon@2x.png" height="22px" /> Share this tool</a>
+                            <a href="#" class="icon-link"><img src="img/share-icon@2x.png" height="22px" /> Share calculator</a>
                         </div>
                     </div><!--// .col-sm-3 -->
                 </div><!--// .row --> 
@@ -37,7 +37,7 @@
                                     </h3>
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="row px-4 pb-4">
+                                    <div class="row px-4">
 
                                         <?php echo question(
                                                 1, // Wrap in BS column? (bool)
@@ -81,7 +81,7 @@
                                 </div>
                                 <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
                                     
-                                    <div class="row px-4 pb-4">
+                                    <div class="row px-4">
 
                                         <?php echo question(
                                                 1, // Wrap in BS column? (bool)
@@ -146,8 +146,8 @@
                                     </h3>
                                 </div>
                                 <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
-                                    
-                                     <div class="row px-4 pb-4">
+                                     
+                                     <div class="row px-4">
 
                                         <?php echo question(
                                                 1, // Wrap in BS column? (bool)
@@ -156,7 +156,7 @@
                                                 '100', // max 
                                                 '1', // step
                                                 '20', // value
-                                                '# of employees', // unit
+                                                '%', // unit
                                                 'out_of_spend_percent' // id
                                             ); 
                                         ?>  
@@ -168,14 +168,14 @@
                                                 '50', // max 
                                                 '1', // step
                                                 '17', // value
-                                                '# of employees', // unit
+                                                '%', // unit
                                                 'report_pad_percent' // id
                                             ); 
                                         ?>  
                                     
                                     </div><!--// .row -->
 
-                                    <div class="row px-4 pb-4">
+                                    <div class="row px-4">
 
                                         <?php echo question(
                                                 1, // Wrap in BS column? (bool)
@@ -184,10 +184,10 @@
                                                 '1000', // max 
                                                 '1', // step
                                                 '50', // value
-                                                '# of employees', // unit
+                                                '$ claimed', // unit
                                                 'fraud_average' // id
                                             ); 
-                                        ?> 
+                                        ?>  
 
                                     </div><!--// .row -->                         
 
@@ -238,7 +238,7 @@
                                 </div>
                                 <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
                                     
-                                    <div class="row px-4 pb-4">
+                                    <div class="row px-4">
 
                                         <?php echo question(
                                                 1, // Wrap in BS column? (bool)
