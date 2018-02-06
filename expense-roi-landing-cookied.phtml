@@ -348,5 +348,14 @@
 
         <?php include 'inc/footer-scripts.php'; ?>
 
+        <script>
+            // If user chose cookied version, change button link to point to cookied ROI Landing page
+            var x = getCookie('formcookie');
+            if (x) {
+                console.log('cookie found!');
+                $('#pass-cookie').text('View results').attr('href', 'expense-roi-landing-results.phtml').removeAttr('download');
+            }        
+        </script>
+
     </body>
 </html>

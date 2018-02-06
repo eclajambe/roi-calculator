@@ -60,8 +60,8 @@ include 'inc/head.php';
         <?php include 'inc/footer-scripts.php'; ?>
         
         <script>
+            // If user chose cookied version, change button link to point to cookied ROI Landing page
             //setCookie('formcookie','testcookie',7);
-
             var x = getCookie('formcookie');
             if (x) {
                 $('#pass-cookie').attr("href", "expense-roi-landing-cookied.phtml")
