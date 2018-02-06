@@ -243,6 +243,7 @@ h3.panel-title {
 }
 .panel-title a {
     position: relative;
+    border-bottom: 1px solid #CCC;
 	display: block;
 	color: #333333;
 }
@@ -272,10 +273,6 @@ h3.panel-title {
 
 #calculator .category-container:not(:last-of-type) {
 	margin-bottom: 30px;
-}
-.category-title:not(.collapsed) {
-    border-bottom: 1px solid #CCC;
-    margin-bottom: 1.5rem;
 }
 body.disable-input .panel-heading .panel-title a:after {
 	display: none;

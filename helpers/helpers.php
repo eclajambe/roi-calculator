@@ -16,7 +16,7 @@
 function question($colWrap, $question, $min, $max, $step, $value, $unit, $id='') 
 {	
 
-	$colWrap = ($colWrap == true ) ? 'col-xs-12 col-sm-6 col-md-6 pb-4' : '';
+	$colWrap = ($colWrap == true ) ? 'col-xs-12 col-sm-6 col-md-6 py-4' : '';
 
 	$data  = '<div class="' . $colWrap . '">';
 	$data .= '  <div id="q-container-'.$id.'">';
