@@ -1,0 +1,355 @@
+
+
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Concur Expense ROI Results</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="../css/normalize.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/rangeslider.css">
+        <link rel="stylesheet" href="../css/concur-style.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/custom.css">
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script>
+            /**
+                Click to copy URL
+            **/
+            function Copy() {
+                var Url = document.getElementById("url");
+                Url.innerHTML = window.location.href;
+                console.log(Url.innerHTML)
+                Url.select();
+                document.execCommand("copy");
+            }
+        </script>
+
+    </head>
+
+    <header id="header" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="../img/sap-concur-logo.svg" width="165" />
+                </div><!--// .col-sm-3 -->
+            </div><!--// .row -->
+        </div><!--// .container -->
+    </header>
+
+    <body id="roi-results" class="disable-input">
+
+        <div id="main-content" class="container-fluid bg--white">
+            <div class="container">     
+                
+                <div id="hero" class="row justify-content-md-center pt-5 pb-4">
+                    <div class="col-sm-12 col-md-8 text-center">
+                        <h4 class="tool-name text-uppercase">ROI Calculator</h5>
+                        <h1 class="mb-4">Concur Expense ROI Calculator</h1>
+                        <p>Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    </div><!--// .col-sm-12 -->
+                </div><!--// .row --> 
+
+                <div class="row">
+
+                    <div id="calculator" class="col-md-7">
+
+                        <h3 class="mb-4">Your company details</h3>
+
+                        <div id="company-info" class="category-container border--lt-grey" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#company-info" href="#collapseOne" class="category-title p-4 collapsed" aria-expanded="true" aria-controls="collapseOne">
+                                            Company info
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="row px-4">
+
+                                        <div class="col-xs-12 col-sm-6 col-md-6 py-4">  <div id="q-container-employee_count"><p>How many employees in your company?</p><div class="range-wrap"><input type="range" id="slider-employee_count" class="sliderRange" min="1" max="1000"step="1"value="650"></div><!--// .range-wrap --><div class="value-toggle"><input type="number" id="number-employee_count" class="value-number" min="1" max="1000"step="1"value="650"><span class="value-unit"># of employees</span><span class="more-info"><img src="../img/info-icon@2x.png" /></span></div><!--// .value-toggle -->  </div><!--// #q-container-employee_count --></div><!--// .col-sm -6 -->                                
+                                     </div><!-- // .row -->                              
+                                </div><!--// .panel-collapse -->
+
+                                <div id="reverseCollapseOne" class="reverse-collapse container">
+                                    
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>How many employees in your company?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-sm-right">
+                                            <span id="extra-employee_count" class="collapsed-value">650</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->
+
+                                </div><!--// .reverse-collapse -->
+
+                            </div><!--// .panel -->
+                        </div><!--// .category-container.border--lt-grey -->
+
+                        <div id="employee-expense-distribution" class="category-container border--lt-grey" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#employee-expense-distribution" href="#collapseTwo" class="category-title p-4 collapsed" aria-expanded="true" aria-controls="collapseTwo">
+                                            Employee expense and distribution
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                    
+                                    <div class="row px-4">
+
+                                        <div class="col-xs-12 col-sm-6 col-md-6 py-4">  <div id="q-container-expense_count"><p>How many expense report filers do you have?</p><div class="range-wrap"><input type="range" id="slider-expense_count" class="sliderRange" min="1" max="50"step="1"value="20"></div><!--// .range-wrap --><div class="value-toggle"><input type="number" id="number-expense_count" class="value-number" min="1" max="50"step="1"value="20"><span class="value-unit"># of filers</span><span class="more-info"><img src="../img/info-icon@2x.png" /></span></div><!--// .value-toggle -->  </div><!--// #q-container-expense_count --></div><!--// .col-sm -6 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-6 py-4">  <div id="q-container-expense_per_month"><p>Number of expense reports per filer/month?</p><div class="range-wrap"><input type="range" id="slider-expense_per_month" class="sliderRange" min="1" max="50"step="1"value="2"></div><!--// .range-wrap --><div class="value-toggle"><input type="number" id="number-expense_per_month" class="value-number" min="1" max="50"step="1"value="2"><span class="value-unit"># reports/month</span><span class="more-info"><img src="../img/info-icon@2x.png" /></span></div><!--// .value-toggle -->  </div><!--// #q-container-expense_per_month --></div><!--// .col-sm -6 -->
+                                    </div><!--// .row -->                                  
+
+                                </div><!--// .panel-collapse -->
+
+                                <div id="reverseCollapseTwo" class="reverse-collapse container">
+                                    
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>How many expense report filers do you have?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-sm-right">
+                                            <span id="extra-expense_count" class="collapsed-value">20</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->   
+
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Number of expense reports per filer/month?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-sm-right">
+                                            <span id="extra-expense_per_month" class="collapsed-value">2</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->  
+
+                                </div><!--// .reverse-collapse -->
+                                
+                            </div><!--// .panel -->
+                        </div><!--// .category-container.border--lt-grey -->
+
+                        <div id="losses-fraud-violations" class="category-container border--lt-grey" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#losses-fraud-violations" href="#collapseThree" class="category-title p-4 collapsed" aria-expanded="true" aria-controls="collapseThree">
+                                            Loss due to fraud and violations
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                                     
+                                     <div class="row px-4">
+
+                                        <div class="col-xs-12 col-sm-6 col-md-6 py-4">  <div id="q-container-out_of_spend_percent"><p>Percentage of spend that is out of policy?</p><div class="range-wrap"><input type="range" id="slider-out_of_spend_percent" class="sliderRange" min="0" max="100"step="1"value="20"></div><!--// .range-wrap --><div class="value-toggle"><input type="number" id="number-out_of_spend_percent" class="value-number" min="0" max="100"step="1"value="20"><span class="value-unit">%</span><span class="more-info"><img src="../img/info-icon@2x.png" /></span></div><!--// .value-toggle -->  </div><!--// #q-container-out_of_spend_percent --></div><!--// .col-sm -6 -->  
+
+                                        <div class="col-xs-12 col-sm-6 col-md-6 py-4">  <div id="q-container-report_pad_percent"><p>Percentage of travelers who pad their expense report?</p><div class="range-wrap"><input type="range" id="slider-report_pad_percent" class="sliderRange" min="0" max="50"step="1"value="17"></div><!--// .range-wrap --><div class="value-toggle"><input type="number" id="number-report_pad_percent" class="value-number" min="0" max="50"step="1"value="17"><span class="value-unit">%</span><span class="more-info"><img src="../img/info-icon@2x.png" /></span></div><!--// .value-toggle -->  </div><!--// #q-container-report_pad_percent --></div><!--// .col-sm -6 -->  
+                                    
+                                    </div><!--// .row -->
+
+                                    <div class="row px-4">
+
+                                        <div class="col-xs-12 col-sm-6 col-md-6 py-4">  <div id="q-container-fraud_average"><p>Average amount fraudulently claimed?</p><div class="range-wrap"><input type="range" id="slider-fraud_average" class="sliderRange" min="5" max="1000"step="1"value="50"></div><!--// .range-wrap --><div class="value-toggle"><input type="number" id="number-fraud_average" class="value-number" min="5" max="1000"step="1"value="50"><span class="value-unit">$ claimed</span><span class="more-info"><img src="../img/info-icon@2x.png" /></span></div><!--// .value-toggle -->  </div><!--// #q-container-fraud_average --></div><!--// .col-sm -6 -->  
+
+                                    </div><!--// .row -->                         
+
+                                </div><!--// .panel-collapse -->
+
+                                <div id="reverseCollapseThree" class="reverse-collapse container">
+                                    
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Percentage of spend that is out of policy?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-sm-right">
+                                            <span id="extra-out_of_spend_percent" class="collapsed-value">20</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row --> 
+
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Percentage of travelers who pad their expense report?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-sm-right">
+                                            <span id="extra-report_pad_percent" class="collapsed-value">17</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->
+
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Average amount fraudulently claimed?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-sm-right">
+                                            <span id="extra-fraud_average" class="collapsed-value">50</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->
+
+                                </div><!--// .reverse-collapse -->
+
+                            </div><!--// .panel -->
+                        </div><!--// .category-container.border--lt-grey -->
+
+                        <div id="time-effort" class="category-container border--lt-grey" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingFour">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#time-effort" href="#collapseFour" class="category-title p-4 collapsed" aria-expanded="true" aria-controls="collapseFour">
+                                            Time and effort
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+                                    
+                                    <div class="row px-4">
+
+                                        <div class="col-xs-12 col-sm-6 col-md-6 py-4">  <div id="q-container-expense_time"><p>Time it takes to create an expense report?</p><div class="range-wrap"><input type="range" id="slider-expense_time" class="sliderRange" min="1" max="100"step="1"value="5"></div><!--// .range-wrap --><div class="value-toggle"><input type="number" id="number-expense_time" class="value-number" min="1" max="100"step="1"value="5"><span class="value-unit">min</span><span class="more-info"><img src="../img/info-icon@2x.png" /></span></div><!--// .value-toggle -->  </div><!--// #q-container-expense_time --></div><!--// .col-sm -6 --> 
+
+                                        <div class="col-xs-12 col-sm-6 col-md-6 py-4">  <div id="q-container-review_time"><p>Time it takes a manager to review and approve each report?</p><div class="range-wrap"><input type="range" id="slider-review_time" class="sliderRange" min="1" max="100"step="1"value="11"></div><!--// .range-wrap --><div class="value-toggle"><input type="number" id="number-review_time" class="value-number" min="1" max="100"step="1"value="11"><span class="value-unit">min</span><span class="more-info"><img src="../img/info-icon@2x.png" /></span></div><!--// .value-toggle -->  </div><!--// #q-container-review_time --></div><!--// .col-sm -6 --> 
+
+                                    </div><!--// .row -->
+
+                                    <div class="row px-4 pb-4">
+
+                                        <div class="col-xs-12 col-sm-6 col-md-6 py-4">  <div id="q-container-back_employee_time"><p>Time it takes for a back office employee to review and approve?</p><div class="range-wrap"><input type="range" id="slider-back_employee_time" class="sliderRange" min="1" max="100"step="1"value="20"></div><!--// .range-wrap --><div class="value-toggle"><input type="number" id="number-back_employee_time" class="value-number" min="1" max="100"step="1"value="20"><span class="value-unit">min</span><span class="more-info"><img src="../img/info-icon@2x.png" /></span></div><!--// .value-toggle -->  </div><!--// #q-container-back_employee_time --></div><!--// .col-sm -6 --> 
+
+                                        <div class="col-xs-12 col-sm-6 col-md-6 py-4">  <div id="q-container-reimbursement_time"><p>Time it takes to create a reimbursement check?</p><div class="range-wrap"><input type="range" id="slider-reimbursement_time" class="sliderRange" min="1" max="100"step="1"value="20"></div><!--// .range-wrap --><div class="value-toggle"><input type="number" id="number-reimbursement_time" class="value-number" min="1" max="100"step="1"value="20"><span class="value-unit">min</span><span class="more-info"><img src="../img/info-icon@2x.png" /></span></div><!--// .value-toggle -->  </div><!--// #q-container-reimbursement_time --></div><!--// .col-sm -6 -->                                        
+                                    </div><!--// .row -->
+
+                                </div><!--// .panel-collapse -->
+
+                                <div id="reverseCollapseFour" class="reverse-collapse container">
+                                    
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Time it takes to create an expense report?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-sm-right">
+                                            <span id="extra-out_of_spend_percent" class="collapsed-value">5</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row --> 
+
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Time it takes a manager to review and approve each report?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-sm-right">
+                                            <span id="extra-report_pad_percent" class="collapsed-value">11</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->
+
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Time it takes for a back office employee to review and approve?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-sm-right">
+                                            <span id="extra-fraud_average" class="collapsed-value">20</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->
+
+                                    <div class="d-flex align-items-center row p-2">
+                                        <div class="col-sm-10">
+                                            <p>Time it takes to create a reimbursement check?</p>
+                                        </div><!--// .col-sm-10 -->
+                                        <div class="col-sm-2 text-sm-right">
+                                            <span id="extra-fraud_average" class="collapsed-value">20</span>
+                                        </div><!--// .col-sm-2 -->
+                                    </div><!--// .row -->
+
+                                </div><!--// .reverse-collapse -->
+
+                            </div><!--// .panel -->
+                        </div><!--// .category-container.border--lt-grey -->
+
+                    </div><!--// #calculator.col-sm-7 -->
+
+                                        <div id="sidebar" class="col-md-5 mt-4 mt-md-0">
+                        
+                        <h3 class="mb-4">Your estimated ROI</h3>
+
+                        <div class="sticky">
+
+                            <div class="row no-gutters">
+                                <div id="labor-savings" class="col-md-12 col-lg-6 text-center">
+                                    <div class="border--lt-grey eq-height p-4 br-0 bb-0 r-tl">
+                                        <p>Yearly labor savings</p>
+                                        <span id="final_score" class="value-number sm gold-text">$25,000</span>
+                                    </div><!--// .border--lt-grey -->
+                                </div><!--// .col-md-12.col-lg-6-->
+
+                                <div id="efficiency-increase" class="col-md-12 col-lg-6 text-center">
+                                    <div class="border--lt-grey eq-height p-4 bb-0 r-tr">
+                                        <p>Efficiency increase</p>
+                                        <span id="final_efficiency" class="value-number sm gold-text">5%</span>
+                                    </div><!--// .border--lt-grey -->
+                                </div><!--// .col-md-12.col-lg-6 -->
+                            </div><!--// .row -->
+
+                            <div class="row">
+                                <div id="projected-roi" class="col-sm-12 text-center">
+                                    <div class="border--lt-gold eq-height p-4 r-br r-bl">
+                                        <p>Estimated yearly ROI</p>
+                                        <span id="final_roi" class="value-number gold-text">$284,000</span>
+                                        <a id="pass-cookie" href="../img/ConcurROICalculatorResults.pdf" class="btn btn-primary mt-3" download>Download results</a>
+                                    </div><!--// .border--lt-grey -->
+                                </div><!--// .col-sm-12 -->
+                            </div><!--// .row -->
+                        </div><!--// .sticky -->
+                    </div><!--// #sidebar -->
+
+                </div><!--// .row -->
+            </div><!--// .container -->
+        </div><!--// .container-fluid -->
+
+        <div class="spacer m-5"></div>
+
+                <div class="container mb-5">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="mb-4">Share this calculator</h2>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="http://www.facebook.com/sharer.php?u=" target="_blank" title="Share this page on Facebook"><i class="fab fa-facebook-f"></i> Share</a></li>
+                        <li class="list-inline-item"><a href="http://twitter.com/share?url=yo.com?text=Check" target="_blank" title="Tweet this page on Twitter"><i class="fab fa-twitter"></i> Tweet</a></li>
+                        <li class="list-inline-item"><a href="http://www.linkedin.com/shareArticle?mini=true&url=YOUR_URL_to_share" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+                    </ul>
+                    <div>
+                        <input type="button" value="Copy Url" onclick="Copy();" /><textarea id="url" rows="1" cols="30"></textarea>
+                    </div>
+                </div><!--// .col-sm-12 -->
+            </div><!--// .row -->
+        </div><!--// .container -->
+                        <div class="container-fluid bg--lt-grey ph-module py-5"><div class="container"><div class="row"><div class="col-sm-4 text-center"><div class="bg--white p-4"><span class="ph ph-icon mb-4"></span><h3>Placeholder CTA</h3><p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.</p><a href="#">Learn more</a></div><!--// .p-4 --></div><!--// . col-sm-4 --><div class="col-sm-4 text-center"><div class="bg--white p-4"><span class="ph ph-icon mb-4"></span><h3>Placeholder CTA</h3><p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.</p><a href="#">Learn more</a></div><!--// .p-4 --></div><!--// . col-sm-4 --><div class="col-sm-4 text-center"><div class="bg--white p-4"><span class="ph ph-icon mb-4"></span><h3>Placeholder CTA</h3><p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod.</p><a href="#">Learn more</a></div><!--// .p-4 --></div><!--// . col-sm-4 --></div><!--// .row --></div><!--// .container --></div><!--// .container-fluid -->
+                <footer id="footer"></footer>
+
+<!-- Modernizer -->
+<script src="../js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+<!-- Bootstrap Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<!-- Bootstrap main -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<!-- Range Slider (http://rangeslider.js.org/) -->
+<script src="../js/vendor/rangeslider.min.js"></script>        
+<!-- Stickyfill (https://github.com/wilddeer/stickyfill) -->
+<script src="../js/vendor/stickyfill.min.js"></script>
+<script>var elements = $('.sticky'); Stickyfill.add(elements);</script>
+<script src="../js/plugins.js"></script>
+<script src="../js/main.js"></script>        
+    </body>
+</html>

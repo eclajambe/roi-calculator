@@ -25,7 +25,7 @@
                                     <div class="border--lt-gold eq-height p-4 r-br r-bl">
                                         <p>Estimated yearly ROI</p>
                                         <span id="final_roi" class="value-number gold-text">$284,000</span>
-                                        <a id="pass-cookie" href="img/ConcurROICalculatorResults.pdf" class="btn btn-primary mt-3" download>Download results</a>
+                                        <a id="pass-cookie" href="../img/ConcurROICalculatorResults.pdf" class="btn btn-primary mt-3" download>Download results</a>
                                     </div><!--// .border--lt-grey -->
                                 </div><!--// .col-sm-12 -->
                             </div><!--// .row -->

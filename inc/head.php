@@ -17,13 +17,13 @@ require('helpers/helpers.php');
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="../css/normalize.css">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/rangeslider.css">
-        <link rel="stylesheet" href="css/concur-style.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="../css/rangeslider.css">
+        <link rel="stylesheet" href="../css/concur-style.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/custom.css">
 
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script>
@@ -46,7 +46,7 @@ require('helpers/helpers.php');
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <img src="img/sap-concur-logo.svg" width="165" />
+                    <img src="../img/sap-concur-logo.svg" width="165" />
                 </div><!--// .col-sm-3 -->
             </div><!--// .row -->
         </div><!--// .container -->
