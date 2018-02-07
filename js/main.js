@@ -128,7 +128,7 @@ $('.reveal-form').click(function() {
 
 
 // Artifically click a button:
-//    $('#employee-expense-distribution .category-title').click();
+// $('#employee-expense-distribution .category-title').click();
 // Uses jQuery's default hide/show
 $('#company-info .category-title').on(
     'click',
@@ -184,3 +184,5 @@ function getCookie(name) {
 function eraseCookie(name) {   
     document.cookie = name+'=; Max-Age=-99999999;';  
 }
+
+

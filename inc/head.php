@@ -1,11 +1,14 @@
-<?php require('helpers/helpers.php'); ?>
+<?php 
+ob_start (); // Buffer output
+require('helpers/helpers.php'); 
+?>
 
 <!doctype html>
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ROI Landing | Uncookied</title>
+        <title><!--TITLE--></title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,6 +24,20 @@
         <link rel="stylesheet" href="css/concur-style.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/custom.css">
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script>
+            /**
+                Click to copy URL
+            **/
+            function Copy() {
+                var Url = document.getElementById("url");
+                Url.innerHTML = window.location.href;
+                console.log(Url.innerHTML)
+                Url.select();
+                document.execCommand("copy");
+            }
+        </script>
 
     </head>
 

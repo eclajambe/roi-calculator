@@ -1,4 +1,7 @@
-<?php include 'inc/head.php'; ?>
+<?php 
+include 'inc/head.php'; 
+$pageTitle = 'Concur Expense ROI Calculator'; // Call this in your pages' files to define the page title
+?>
     
     <body id="uncookied-roi-landing">
 
@@ -409,11 +412,20 @@
 
         </div><!--// .container-fluid -->
 
-        <?php echo placeholderModule('content', 'left', 'Placeholder module', 0); ?>
-        <?php echo placeholderModule('content', 'right', 'Placeholder module', 0); ?>
+        <?php include 'inc/share-buttons.inc'; ?>
+
+        <?php //echo placeholderModule('content', 'left', 'Placeholder module', 0); ?>
+        <?php //echo placeholderModule('content', 'right', 'Placeholder module', 0); ?>
         <?php echo placeholderModule('cta', '','Placeholder CTA', 1); ?>
 
         <?php include 'inc/footer-scripts.php'; ?>
 
     </body>
 </html>
+<?
+$pageContents = ob_get_contents (); // Get all the page's HTML into a string
+ob_end_clean (); // Wipe the buffer
+
+// Replace <!--TITLE--> with $pageTitle variable contents, and print the HTML
+echo str_replace ('<!--TITLE-->', $pageTitle, $pageContents);
+?>

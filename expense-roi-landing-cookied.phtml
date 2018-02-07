@@ -1,4 +1,7 @@
-<?php include 'inc/head.php'; ?>
+<?php 
+include 'inc/head.php'; 
+$pageTitle = 'Concur Expense ROI Calculator'; // Call this in your pages' files to define the page title
+?>
     
     <body id="uncookied-roi-landing">
 
@@ -321,7 +324,7 @@
                                         <div class="col-sm-10">
                                             <p>Time it takes to create a reimbursement check?</p>
                                         </div><!--// .col-sm-10 -->
-                                        <div class="col-sm-2 text-snmm-right">
+                                        <div class="col-sm-2 text-sm-right">
                                             <span id="extra-reimbursement_time" class="collapsed-value">20</span>
                                         </div><!--// .col-sm-2 -->
                                     </div><!--// .row -->
@@ -342,8 +345,10 @@
 
         </div><!--// .container-fluid -->
 
-        <?php echo placeholderModule('content', 'left', 'Placeholder module', 0); ?>
-        <?php echo placeholderModule('content', 'right', 'Placeholder module', 0); ?>
+        <?php include 'inc/share-buttons.inc'; ?>
+
+        <?php //echo placeholderModule('content', 'left', 'Placeholder module', 0); ?>
+        <?php //echo placeholderModule('content', 'right', 'Placeholder module', 0); ?>
         <?php echo placeholderModule('cta', '','Placeholder CTA', 1); ?>
 
         <?php include 'inc/footer-scripts.php'; ?>
@@ -353,9 +358,16 @@
             var x = getCookie('formcookie');
             if (x) {
                 console.log('cookie found!');
-                $('#pass-cookie').text('View results').attr('href', 'expense-roi-landing-results.phtml').removeAttr('download');
+                $('#pass-cookie').text('Calculate ROI').attr('href', 'expense-roi-landing-results.phtml').removeAttr('download');
             }        
         </script>
 
     </body>
 </html>
+<?
+$pageContents = ob_get_contents (); // Get all the page's HTML into a string
+ob_end_clean (); // Wipe the buffer
+
+// Replace <!--TITLE--> with $pageTitle variable contents, and print the HTML
+echo str_replace ('<!--TITLE-->', $pageTitle, $pageContents);
+?>

@@ -1,5 +1,6 @@
 <?php 
 include 'inc/head.php'; 
+$pageTitle = '[Product] Page'; // Call this in your pages' files to define the page title
 ?>
 
     <body>
@@ -19,7 +20,7 @@ include 'inc/head.php';
                 </div><!--// .row -->
                 
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="border--lt-grey eq-height p-4">
                             
                             <?php echo question(
@@ -36,7 +37,7 @@ include 'inc/head.php';
 
                         </div><!--// .border--lt-grey -->
                     </div><!--// .col-sm-4 -->
-                    <div class="col-sm-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="border--lt-grey eq-height p-4">
                             <p>Typical number of expense reports filed per year</p>
                             <div class="value-outcome align-bottom">
@@ -44,7 +45,7 @@ include 'inc/head.php';
                             </div><!--// .value-outcome -->
                         </div><!--// .border--lt-grey -->    
                     </div><!--// .col-sm-4 -->
-                    <div class="col-sm-4">
+                    <div class="col-md-12 col-lg-4">
                         <div class="border--lt-grey eq-height p-4">
                             <p>For a customized ROI report, please visit our ROI Calculator</p>
                             <a id="pass-cookie" class="btn btn-primary align-bottom" href="expense-roi-landing-uncookied.phtml">Calculate your ROI</a>
@@ -70,3 +71,10 @@ include 'inc/head.php';
         
     </body>
 </html>
+<?
+$pageContents = ob_get_contents (); // Get all the page's HTML into a string
+ob_end_clean (); // Wipe the buffer
+
+// Replace <!--TITLE--> with $pageTitle variable contents, and print the HTML
+echo str_replace ('<!--TITLE-->', $pageTitle, $pageContents);
+?>

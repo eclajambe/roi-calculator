@@ -2,6 +2,7 @@
     $header = false;
     $footer = false;
     include 'inc/head.php'; 
+    $pageTitle = '*Select Cookies*'; // Call this in your pages' files to define the page title
 ?>
 
     <body>
@@ -54,3 +55,10 @@
         
     </body>
 </html>
+<?
+$pageContents = ob_get_contents (); // Get all the page's HTML into a string
+ob_end_clean (); // Wipe the buffer
+
+// Replace <!--TITLE--> with $pageTitle variable contents, and print the HTML
+echo str_replace ('<!--TITLE-->', $pageTitle, $pageContents);
+?>
