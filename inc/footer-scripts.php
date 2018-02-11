@@ -15,6 +15,6 @@
 <script src="../js/vendor/rangeslider.min.js"></script>        
 <!-- Stickyfill (https://github.com/wilddeer/stickyfill) -->
 <script src="../js/vendor/stickyfill.min.js"></script>
-<script>var elements = $('.sticky'); Stickyfill.add(elements);</script>
+<script>var elements = $('.sticky'); Stickyfill.add(elements);</script>  
 <script src="../js/plugins.js"></script>
 <script src="../js/main.js"></script>

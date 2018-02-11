@@ -185,4 +185,9 @@ function eraseCookie(name) {
     document.cookie = name+'=; Max-Age=-99999999;';  
 }
 
-
+/**
+    Create Tooltips
+**/
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})

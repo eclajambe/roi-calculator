@@ -13,7 +13,7 @@
 	* @var $value   - (number) Initial value of input (the assumption we've made)
 	*
 */
-function question($colWrap, $question, $min, $max, $step, $value, $unit, $id='') 
+function question($colWrap, $question, $min, $max, $step, $value, $unit, $tooltip, $id='') 
 {	
 
 	$colWrap = ($colWrap == true ) ? 'col-xs-12 col-sm-6 col-md-6 py-4' : '';
@@ -27,7 +27,11 @@ function question($colWrap, $question, $min, $max, $step, $value, $unit, $id='')
 	$data .= 	'<div class="value-toggle">';
 	$data .= 		'<input type="number" id="number-'.$id.'" class="value-number" min="' . $min . '" max="' . $max . '"' . 'step="' . $step . '"' . 'value="' . $value . '">';
 	$data .= 		'<span class="value-unit">' . $unit . '</span>';
-	$data .= 		'<span class="more-info"><img src="../img/info-icon@2x.png" /></span>';
+	
+	if ( $tooltip == true ) {
+		$data .= '<a href="#" data-toggle="tooltip" data-placement="top" title="Assumption: 20% - IDC Report, 2017" class="more-info"><img src="../img/info-icon@2x.png" /></a>';
+	}
+	
 	$data .=   	'</div><!--// .value-toggle -->';
 	$data .= '  </div><!--// #q-container-'.$id.' -->';
 	$data .= '</div><!--// .col-sm -6 -->';
